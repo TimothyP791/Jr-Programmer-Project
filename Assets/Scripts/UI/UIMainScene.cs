@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -72,5 +73,10 @@ public class UIMainScene : MonoBehaviour
             m_CurrentContent = content;
             InfoPopup.Name.text = content.GetName();
         }
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0); // 0 is the index of the menu scene defined in build settings window
     }
 }
