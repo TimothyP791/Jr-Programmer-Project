@@ -4,7 +4,7 @@ using System.IO;
 public class MainManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static MainManager Instance;
+    public static MainManager Instance { get; private set; } // Add getter and private setter at the end of the line for Encapsulation
     public Color TeamColor;
     private void Awake()
     {
